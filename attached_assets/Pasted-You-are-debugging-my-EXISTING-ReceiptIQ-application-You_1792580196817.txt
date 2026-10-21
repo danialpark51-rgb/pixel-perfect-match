@@ -1,0 +1,49 @@
+You are debugging my EXISTING ReceiptIQ application. Your previous repair attempt did not fix the problem.
+
+IMPORTANT: Do not rebuild the application, redesign the UI, or start implementing new features yet.
+
+First, reproduce and identify the actual root cause of the navigation bug by inspecting the existing source code.
+
+CURRENT PROBLEMS:
+
+1. Clicking navigation items sometimes opens the same screen instead of the selected feature.
+2. The sidebar, overlay, or popup may open repeatedly.
+3. Some navigation buttons do not work correctly.
+4. The previous attempted fix did not solve these problems.
+
+REQUIRED ACTIONS:
+
+1. Inspect the actual React components responsible for the sidebar, navigation menu, overlays, modals, and route changes.
+2. Trace the click handlers and state changes from the clicked menu item to the resulting screen.
+3. Check for duplicate event listeners, nested click handlers, event bubbling, repeated state updates, incorrect route mappings, conflicting modal states, and effects that reopen the sidebar.
+4. Check whether the project uses React Router or another routing system. Follow the existing routing architecture rather than introducing a second router.
+5. Identify the exact cause using the source code. Do not guess and do not merely add stopPropagation everywhere.
+6. Fix the smallest number of files necessary. Preserve the current UI design and all unrelated working functionality.
+7. Ensure every navigation item points to its own correct destination.
+8. Ensure the mobile sidebar opens once, closes after selecting a destination, and closes when the close button or backdrop is clicked.
+9. Ensure clicking inside the sidebar does not accidentally trigger the backdrop handler.
+10. Ensure buttons perform their intended actions only once per click.
+11. Check for TypeScript errors, missing routes, broken imports, and runtime errors after the changes.
+
+TEST REQUIREMENTS:
+
+- Open the sidebar and close it.
+- Open the sidebar and select each navigation destination.
+- Confirm the correct page opens each time.
+- Navigate between at least three different destinations.
+- Confirm the sidebar does not reopen unexpectedly.
+- Test the mobile layout.
+- Run the available build and tests.
+
+Do not claim the bug is fixed unless the changes have been made and the relevant tests have actually passed.
+
+At the end, tell me:
+A. The exact root cause you found.
+B. The files you changed.
+C. What you changed in each file.
+D. Which tests you actually ran and their results.
+E. Any remaining errors.
+
+If you cannot reproduce the problem or lack the information required to verify it, explain what is missing instead of claiming success.
+
+Start by inspecting the code now and fixing the existing bug. Do not stop after providing an explanation or audit report.
