@@ -1,0 +1,61 @@
+Create a professional SaaS web application named ReceiptIQ — AI Receipt Intelligence.
+
+PROJECT PURPOSE:
+Build an AI Autonomous Receipt Intelligence and Expense Investigation Platform for small businesses, finance teams, expense auditors, and travelers.
+
+CORE OBJECTIVES:
+The complete product is planned to support 16 features:
+
+1. Universal receipt scanner.
+2. AI expense auto-categorizer.
+3. Multilingual receipt intelligence.
+4. Receipt math auditor.
+5. Expense anomaly radar.
+6. Duplicate receipt detector.
+7. Receipt tampering and integrity analyzer.
+8. Receipt-to-payment reconciliation.
+9. Cross-receipt contradiction investigator.
+10. Autonomous investigation agent.
+11. Competing-hypothesis investigator.
+12. Evidence confidence and gap detector.
+13. Risk-based investigation prioritizer.
+14. Evidence-linked investigation reports.
+15. Investigation replay and feedback learning.
+16. Traveler market-price comparison.
+
+FIRST DEVELOPMENT STAGE:
+Build the frontend and navigation only.
+
+PAGES:
+
+- Landing page with product explanation and call to action.
+- Dashboard with expense summaries and investigation statistics.
+- Receipt upload page.
+- Receipt history page.
+- Investigation workspace.
+- Evidence and findings page.
+- Reports page.
+- Feedback and review history.
+- Settings and account page.
+- Pricing page.
+
+DESIGN:
+
+- Premium, trustworthy, modern SaaS appearance.
+- White background, dark navy text and restrained blue accents.
+- Responsive design for Android phones, tablets, and desktops.
+- Mobile-friendly navigation and large touch targets.
+- Consistent spacing, typography, icons and reusable components.
+- Useful empty states, loading states and error messages.
+
+ENGINEERING REQUIREMENTS:
+
+- Organize the code into reusable components.
+- Prepare for a Python FastAPI backend and Supabase PostgreSQL database.
+- Plan for secure authentication, private receipt storage and saved investigation history.
+- Keep API secrets out of frontend code.
+- Clearly distinguish demonstration data from real processed data.
+- Do not claim any feature works until its actual functionality is implemented and tested.
+- Do not delete existing features when extending the application.
+
+For this first stage, create the landing page, main application shell, dashboard and navigation. Do not attempt to implement all 16 AI features yet. Make the result clean, professional and easy to use on mobile.

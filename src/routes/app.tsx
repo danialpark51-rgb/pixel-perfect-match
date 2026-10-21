@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowDownRight,
   ArrowRight,
@@ -73,8 +73,10 @@ function Dashboard() {
             <Button variant="outline" disabled className="h-9 cursor-not-allowed gap-1.5 px-3 text-[11px]">
               <CalendarDays className="size-3.5" aria-hidden="true" /> This month
             </Button>
-            <Button disabled title="Receipt uploads are not available in this preview" className="h-9 cursor-not-allowed gap-1.5 px-3 text-[11px]">
-              <ReceiptText className="size-3.5" aria-hidden="true" /> Add receipt
+            <Button asChild className="h-9 gap-1.5 px-3 text-[11px]">
+              <Link to="/app/$section" params={{ section: "upload-receipts" }}>
+                <ReceiptText className="size-3.5" aria-hidden="true" /> Add receipt
+              </Link>
             </Button>
           </div>
         </div>
@@ -129,7 +131,9 @@ function Dashboard() {
               </table>
             </div>
             <div className="border-t border-border px-4 py-3 sm:px-5">
-              <Button variant="link" disabled className="h-auto cursor-not-allowed p-0 text-[10px] text-primary">View all expenses <ArrowRight className="size-3" aria-hidden="true" /></Button>
+              <Button asChild variant="link" className="h-auto p-0 text-[10px] text-primary">
+                <Link to="/app/$section" params={{ section: "receipt-history" }}>View receipt history <ArrowRight className="size-3" aria-hidden="true" /></Link>
+              </Button>
             </div>
           </section>
 
@@ -165,7 +169,11 @@ function Dashboard() {
                   </li>;
                 })}
               </ul>
-              <div className="border-t border-border px-4 py-3 sm:px-5"><Button variant="link" disabled className="h-auto cursor-not-allowed p-0 text-[10px] text-primary">Go to investigations <ArrowRight className="size-3" aria-hidden="true" /></Button></div>
+              <div className="border-t border-border px-4 py-3 sm:px-5">
+                <Button asChild variant="link" className="h-auto p-0 text-[10px] text-primary">
+                  <Link to="/app/$section" params={{ section: "investigations" }}>Explore investigations <ArrowRight className="size-3" aria-hidden="true" /></Link>
+                </Button>
+              </div>
             </section>
           </div>
         </div>
